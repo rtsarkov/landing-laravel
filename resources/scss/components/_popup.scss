@@ -1,0 +1,221 @@
+
+    .popup {   
+        padding: 0;
+        @include breakpoint(lg) {
+            max-width: 70%;
+        }
+        &-content {  
+            overflow-y: auto;
+            max-height: 330px;
+            &::-webkit-scrollbar {
+                height: 3px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: $blue;
+                border-radius: 1px;
+            }
+            &::-webkit-scrollbar-track {
+                background-color: #fff;
+                border: 1px solid rgba(2,94,161,.5);
+                border-radius: 1px;
+            }
+        }
+        &__body {  
+            padding:25px;   
+            @include breakpoint(lg) {       
+                padding-top:64px;
+                padding-left:69px;
+                padding-right:101px;
+                padding-bottom:0px;
+                margin-bottom: 41px;
+            }
+        }
+
+        &__image {
+                display: flex;
+                align-items: center;
+                text-align:center;
+                img {
+                    margin: auto;
+                    max-width: 100%;  
+                    max-height: 250px;
+            }
+        }
+        &-title {
+            width: 100%;
+            font-weight: bold;
+            font-size: 18px; 
+            margin-top: 20px;
+            margin-bottom: 25px;         
+            line-height: initial;
+            
+            @include breakpoint(md) {
+                font-size: 30px;   
+                width: 90%;   
+
+            }
+            @include breakpoint(lg) {
+                font-weight: bold;
+                font-size: 45px;
+                line-height: 60px;  
+                margin-bottom: 12px; 
+            }
+        }
+        &.modal .fancybox-close-small {
+            color: $blue;
+            width: 50px;
+            height: 50px;
+            padding: 0;
+            margin-top: 5px;
+            margin-right: 5px;
+            @include breakpoint(lg) {    
+                margin-top: 25px;
+                margin-right: 25px;
+                width: 75px;
+                height: 75px;
+            }
+        }
+        .blue-form {
+            background: #123256;
+            border-radius: 0px;
+            padding:25px;
+            
+            @include breakpoint(lg) {
+                padding-top:44px;
+                padding-left:69px;
+                padding-right:101px;
+                padding-bottom:48px; 
+            }
+            &__title {
+                font-weight: bold;
+                font-size: 18px;
+                color: $white;
+                line-height: initial; 
+                margin-bottom: 15px;
+                @include breakpoint(md) {
+                    font-size: 30px;
+                }
+                @include breakpoint(lg) {  
+                    font-size: 45px;
+                    line-height: 60px;
+                    margin-bottom: 0px;
+                }
+            }
+            .form-control {
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid $white;
+                background: #123256;
+                color: $white;
+                font-size: 15px;
+                line-height: initial;
+                padding: 2px;
+                margin-bottom: 15px;
+
+                @include breakpoint(md) {
+                    font-size: 18px;
+                }
+                @include breakpoint(lg) {
+                    font-size: 20px;
+                    line-height: 40px;
+                    margin-bottom: 20px;
+                }
+                &:focus-visible {
+                    outline:0;
+                }
+                &::placeholder {
+                    color: $white;
+                    font-size: 15px;
+
+                    @include breakpoint(md) {
+                        font-size: 18px;
+                    }
+                    @include breakpoint(lg) {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .modal {
+        &__head {
+            padding: 25px;
+            @include breakpoint(md) { 
+                padding: 130px 25px 50px;
+            }
+            &_blue {
+                background: #123256;
+            }
+        }
+        &__title {
+            font-weight: bold;
+            text-align: center;
+            color: $white; 
+            font-size: 20px;
+            line-height: 30px;
+            @include breakpoint(md) {                
+            font-size: 45px;
+            line-height: 60px;
+            }
+        }
+        &__body {
+            padding: 40px;
+            
+            @include breakpoint(md) { 
+                padding: 44px 87px 63px;
+            }
+        }
+        .form-control {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid $black;
+            color: $black;
+            font-size: 18px;
+            line-height: initial;
+            padding: 2px;
+            margin-bottom: 18px;
+            @include breakpoint(lg) {
+                font-size:20px;
+                line-height:40px;
+                margin-bottom:20px
+            }
+            &:focus-visible{
+                outline:0
+            }
+            &::placeholder {
+                color: $black;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 40px;
+            }
+            &.is-error {
+                border-color:red;
+                &::placeholder {
+                    color: red;
+                }
+            }
+        }
+        
+        .buttons {              
+                margin-top: 20px;
+                text-align: center;
+            @include breakpoint(lg) { 
+                text-align: left;        
+                margin-top: 40px;
+            }
+        }
+        .fancybox-close-small {
+            color: $blue;
+            width: 50px;
+            height: 50px;
+            padding: 0;
+            margin-top: 5px;
+            margin-right: 5px;
+            @include breakpoint(lg) {
+                margin-top: 25px;
+                margin-right: 25px;
+                width: 75px;
+                height: 75px;
+            }
+        }
+    }
